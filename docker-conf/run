@@ -1,6 +1,5 @@
 #! /bin/sh
 set -e
-cd /var/www/html && git config --add --system http.sslVerify false
 php artisan migrate --force
 service nginx start
 /usr/bin/supervisord &
